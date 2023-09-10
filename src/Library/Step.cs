@@ -38,7 +38,7 @@ namespace Full_GRASP_And_SOLID.Library
             }
             set
             {
-                StepCost = this.Quantity * Input.UnitCost + Equipment.HourlyCost*this.Time;
+                StepCost = this.Quantity * Input.UnitCost + Equipment.HourlyCost*(this.Time / 60);
             }
         }
 
