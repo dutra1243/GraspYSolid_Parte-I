@@ -37,6 +37,10 @@ namespace Full_GRASP_And_SOLID
             AddEquipmentToCatalog("Cafetera", 1000);
             AddEquipmentToCatalog("Hervidor", 2000);
         }
+        public static double GetProductionCost(Recipe recipe)
+        {
+            return recipe.TotalCost;
+        }
 
         private static void AddProductToCatalog(string description, double unitCost)
         {

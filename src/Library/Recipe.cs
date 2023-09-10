@@ -19,7 +19,7 @@ namespace Full_GRASP_And_SOLID.Library
         Recipe es la clase que tiene accesso a todas la etapas de una determinada receta
         por lo tanto se le asigna la responsabilidad de conocer el costo total de la receta
         */
-        private double TotalCost
+        public double TotalCost
         {
             get
             {
