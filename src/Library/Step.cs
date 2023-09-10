@@ -24,6 +24,12 @@ namespace Full_GRASP_And_SOLID.Library
 
         public Equipment Equipment { get; set; }
 
+        /*
+        Step es la clase que posue todas las informaciones necesárias para
+        calcular el costo de un insumo y el costo de equipamento utilizado.
+        Por lo tanto, por medio de Expert se le asigna la responsabilidad de
+        saber el costo de las etapas de una receta.
+        */
         public double StepCost
         {
             get

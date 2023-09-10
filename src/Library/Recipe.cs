@@ -15,6 +15,10 @@ namespace Full_GRASP_And_SOLID.Library
 
         public Product FinalProduct { get; set; }
 
+        /*
+        Recipe es la clase que tiene accesso a todas la etapas de una determinada receta
+        por lo tanto se le asigna la responsabilidad de conocer el costo total de la receta
+        */
         private double TotalCost
         {
             get
