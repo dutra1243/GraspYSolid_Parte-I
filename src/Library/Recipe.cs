@@ -19,20 +19,7 @@ namespace Full_GRASP_And_SOLID.Library
         Recipe es la clase que tiene accesso a todas la etapas de una determinada receta
         por lo tanto se le asigna la responsabilidad de conocer el costo total de la receta
         */
-        public double TotalCost
-        {
-            get
-            {
-                return TotalCost;
-            }
-            set
-            {
-                foreach (Step step in this.steps)
-                {
-                    TotalCost = step.StepCost;
-                }
-            }
-        }
+        public double TotalCost { get; set; }
 
         public void AddStep(Step step)
         {
@@ -49,6 +36,7 @@ namespace Full_GRASP_And_SOLID.Library
             Console.WriteLine($"Receta de {this.FinalProduct.Description}:");
             foreach (Step step in this.steps)
             {
+                TotalCost += step.StepCost;
                 Console.WriteLine($"{step.Quantity} de '{step.Input.Description}' " +
                     $"usando '{step.Equipment.Description}' durante {step.Time}" +
                     $"y todo eso cuesta {step.StepCost} ");

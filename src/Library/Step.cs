@@ -14,6 +14,7 @@ namespace Full_GRASP_And_SOLID.Library
             this.Input = input;
             this.Time = time;
             this.Equipment = equipment;
+            StepCost = this.Quantity * Input.UnitCost + Equipment.HourlyCost*(this.Time / 60);
         }
 
         public Product Input { get; set; }
@@ -30,17 +31,7 @@ namespace Full_GRASP_And_SOLID.Library
         Por lo tanto, por medio de Expert se le asigna la responsabilidad de
         saber el costo de las etapas de una receta.
         */
-        public double StepCost
-        {
-            get
-            {
-                return StepCost;
-            }
-            set
-            {
-                StepCost = this.Quantity * Input.UnitCost + Equipment.HourlyCost*(this.Time / 60);
-            }
-        }
+        public double StepCost { get; set;}
 
     }
 }
